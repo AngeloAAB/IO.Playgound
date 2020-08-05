@@ -7,7 +7,8 @@ namespace IO.Playgound
 {
     public class FolderManager
     {
-        public void Create(string folderName, string dirPath = @"..\..\..\")
+        const string DEFAULTPATH = @"..\..\..\..\Exported_Files\";
+        public void Create(string folderName, string dirPath = DEFAULTPATH)
         {
             if (Directory.Exists($"{dirPath}{folderName}"))
             {
@@ -20,7 +21,7 @@ namespace IO.Playgound
             }            
         }
 
-        public void Create(string[] folderNames, string dirPath = @"..\..\..\")
+        public void Create(string[] folderNames, string dirPath = DEFAULTPATH)
         {
             foreach (var folderName in folderNames)
             {
@@ -37,7 +38,7 @@ namespace IO.Playgound
             }
         }
 
-        public void Delete(string folderName, bool deleteSubs, string dirPath = @"..\..\..\")
+        public void Delete(string folderName, bool deleteSubs, string dirPath = DEFAULTPATH)
         {
             if (Directory.Exists($"{dirPath}{folderName}"))
             {

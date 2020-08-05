@@ -10,9 +10,9 @@ namespace IO.Playgound
         {
 
             var dir = new FolderManager();
-            dir.Create("Test");
-            dir.Create(@"Test\Sub Test");
-            dir.Delete("Test", true);
+                dir.Create("Test");
+                dir.Create(@"Test\Sub Test");
+                dir.Delete("Test", true);
 
             string[] folders =
             {
@@ -21,7 +21,7 @@ namespace IO.Playgound
                 @"Workspace\Temp"
             };
 
-            dir.Create(folders);
+               dir.Create(folders);
 
         }
     }
